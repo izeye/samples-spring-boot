@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Test Map</title>
+</head>
+<body>
+<h1>Test Map</h1>
+<table th:each="entry : ${map}">
+    <tr>
+        <td th:text="${entry.key}">Key 1</td>
+        <td th:text="${entry.value}">Value 1</td>
+    </tr>
+</table>
+</body>
+</html>
