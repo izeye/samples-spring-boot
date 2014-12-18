@@ -6,7 +6,8 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.0.RC2")
+//        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.0.RC2")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.0.RELEASE")
     }
 }
 
@@ -41,7 +42,15 @@ dependencies {
     compile("org.hsqldb:hsqldb")
 
     compile("org.springframework.boot:spring-boot-starter-actuator")
-//    compile("org.springframework.boot:spring-boot-starter-data-rest")
+    compile("org.springframework.boot:spring-boot-starter-data-rest")
+
+    compile("org.apache.commons:commons-dbcp2")
+    compile("mysql:mysql-connector-java")
+
+    compile("org.mybatis:mybatis-spring:1.2.2")
+    compile("org.mybatis:mybatis:3.2.8")
+
+    compile("de.codecentric:spring-boot-starter-admin-client:1.1.0")
 
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
