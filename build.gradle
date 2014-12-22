@@ -52,5 +52,8 @@ dependencies {
 
     compile("de.codecentric:spring-boot-starter-admin-client:1.1.0")
 
+    // Only for test.
+    compile("org.codehaus.groovy:groovy-all")
+
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }

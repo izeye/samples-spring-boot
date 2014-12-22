@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 import samples.springboot.controller.exception.Exception1;
 import samples.springboot.controller.exception.Exception2;
 import samples.springboot.controller.exception.Exception3;
+import samples.springboot.domain.Person;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,40 +38,6 @@ public class RestTestController {
   @RequestMapping("/exception3")
   public List<Person> exception3() {
     throw new Exception3("Exception 3");
-  }
-
-  class Person {
-    private String name;
-    private int age;
-
-    public Person(String name, int age) {
-      this.name = name;
-      this.age = age;
-    }
-
-    public String getName() {
-      return name;
-    }
-
-    public void setName(String name) {
-      this.name = name;
-    }
-
-    public int getAge() {
-      return age;
-    }
-
-    public void setAge(int age) {
-      this.age = age;
-    }
-
-    @Override
-    public String toString() {
-      return "Person{" +
-          "name='" + name + '\'' +
-          ", age=" + age +
-          '}';
-    }
   }
 
 }
