@@ -50,6 +50,8 @@ dependencies {
     compile("org.mybatis:mybatis-spring:1.2.2")
     compile("org.mybatis:mybatis:3.2.8")
 
+    compile("net.sf.ehcache:ehcache:2.9.0")
+
     compile("de.codecentric:spring-boot-starter-admin-client:1.1.0")
 
     // Only for test.
