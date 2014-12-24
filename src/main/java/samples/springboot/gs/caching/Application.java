@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
 import org.springframework.cache.ehcache.EhCacheCacheManager;
 import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
 import org.springframework.cache.guava.GuavaCacheManager;
@@ -26,10 +27,10 @@ public class Application implements CommandLineRunner {
 	@Autowired
 	private BookRepository bookRepository;
 
-//	@Bean
-//	public CacheManager cacheManager() {
-//		return new ConcurrentMapCacheManager("books");
-//	}
+	@Bean
+	public CacheManager cacheManager() {
+		return new ConcurrentMapCacheManager("books");
+	}
 
 //	@Bean
 //	public CacheManager cacheManager(net.sf.ehcache.CacheManager cacheManager) {
@@ -43,10 +44,10 @@ public class Application implements CommandLineRunner {
 //		return ehCacheManagerFactoryBean;
 //	}
 
-	@Bean
-	public CacheManager cacheManager() {
-		return new GuavaCacheManager();
-	}
+//	@Bean
+//	public CacheManager cacheManager() {
+//		return new GuavaCacheManager();
+//	}
 
 	@Override
 	public void run(String... args) throws Exception {

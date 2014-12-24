@@ -7,6 +7,6 @@ public interface BookRepository {
 
 	Book getByIsbn(String isbn);
 
-	void update(Book book);
+	void save(Book book);
 
 }

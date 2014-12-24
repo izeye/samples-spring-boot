@@ -13,13 +13,14 @@ public class SimpleBookRepository implements BookRepository {
 	@Override
 	@Cacheable("books")
 	public Book getByIsbn(String isbn) {
-		simulateSlowService();
+//		simulateSlowService();
 		return new Book(isbn, "Some book");
 	}
 
 	@Override
-	@CacheEvict(value = "books", key = "#book.isbn")
-	public void update(Book book) {
+//	@CacheEvict(value = "books", key = "#book.isbn")
+	@CacheEvict(value = "books", key = "#book.isbn == null ? '' : #book.isbn")
+	public void save(Book book) {
 		// Do nothing.
 	}
 

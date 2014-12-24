@@ -45,9 +45,14 @@ public class CachingTests {
 		assertThat(bookRepository.getByIsbn(isbn), is(sameInstance(book)));
 		assertThat(bookRepository.getByIsbn(anotherIsbn), is(sameInstance(anotherBook)));
 
-		bookRepository.update(book);
+		bookRepository.save(book);
 		assertThat(bookRepository.getByIsbn(isbn), is(not(sameInstance(book))));
 		assertThat(bookRepository.getByIsbn(anotherIsbn), is(sameInstance(anotherBook)));
+	}
+
+	@Test
+	public void testWithNullKey() {
+		bookRepository.save(new Book());
 	}
 
 }

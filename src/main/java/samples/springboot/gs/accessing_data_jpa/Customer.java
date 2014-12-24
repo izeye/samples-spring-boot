@@ -55,7 +55,6 @@ public class Customer {
 				"id=" + id +
 				", firstName='" + firstName + '\'' +
 				", lastName='" + lastName + '\'' +
-				'}';
+				'}' + ", " + super.toString();
 	}
-
 }
