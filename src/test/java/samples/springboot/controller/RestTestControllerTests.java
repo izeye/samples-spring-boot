@@ -21,11 +21,17 @@ import java.util.List;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
 @WebAppConfiguration
+//@IntegrationTest
 @IntegrationTest("server.port=0")
 public class RestTestControllerTests {
 
 	@Value("${local.server.port}")
 	int port;
+
+	@Test
+	public void testPort() {
+		System.out.println(port);
+	}
 
 	@Test
 	public void getPersons() {
