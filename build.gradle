@@ -1,8 +1,8 @@
 buildscript {
     repositories {
         maven { url "http://repo.spring.io/snapshot" }
-        maven { url "http://repo.spring.io/libs-release" }
         maven { url "http://repo.spring.io/libs-milestone" }
+        maven { url "http://repo.spring.io/libs-release" }
         mavenCentral()
         mavenLocal()
     }
@@ -27,8 +27,8 @@ targetCompatibility = 1.8
 
 repositories {
     maven { url "http://repo.spring.io/snapshot" }
-    maven { url "http://repo.spring.io/libs-release" }
     maven { url "http://repo.spring.io/libs-milestone" }
+    maven { url "http://repo.spring.io/libs-release" }
     mavenCentral()
     mavenLocal()
 }
