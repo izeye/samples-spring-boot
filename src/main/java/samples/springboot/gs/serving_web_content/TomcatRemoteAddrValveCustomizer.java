@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 /**
  * Created by izeye on 15. 1. 26..
  */
-@Component
+//@Component
 public class TomcatRemoteAddrValveCustomizer implements EmbeddedServletContainerCustomizer {
 
 	@Override
