@@ -21,11 +21,24 @@ public class Application {
 	@Bean
 	public FilterRegistrationBean remoteAddressFilter() {
 		FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
+		filterRegistrationBean.setName("test1");
 		RemoteAddrFilter filter = new RemoteAddrFilter();
-//		filter.setAllow("127.0.0.1");
-		filter.setAllow("0:0:0:0:0:0:0:1");
+		filter.setAllow("127.0.0.1");
+//		filter.setAllow("0:0:0:0:0:0:0:1");
 		filterRegistrationBean.setFilter(filter);
 		filterRegistrationBean.addUrlPatterns("/gs/serving-web-content/testParameters");
+		return filterRegistrationBean;
+	}
+
+	@Bean
+	public FilterRegistrationBean remoteAddressFilter2() {
+		FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
+		RemoteAddrFilter filter = new RemoteAddrFilter();
+		filterRegistrationBean.setName("test2");
+		filter.setAllow("127.0.0.1");
+//		filter.setAllow("0:0:0:0:0:0:0:1");
+		filterRegistrationBean.setFilter(filter);
+		filterRegistrationBean.addUrlPatterns("/gs/serving-web-content/testHeaders");
 		return filterRegistrationBean;
 	}
 

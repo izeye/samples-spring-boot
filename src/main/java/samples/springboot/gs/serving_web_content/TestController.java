@@ -19,7 +19,7 @@ public class TestController {
 	}
 
 	@RequestMapping("/gs/serving-web-content/testHeaders")
-	public String testHeaders(@RequestHeader("name") String name) {
+	public String testHeaders(@RequestHeader(value = "name", required = false) String name) {
 		return name;
 	}
 
