@@ -47,7 +47,7 @@ public class Application {
 			System.out.println(bauer);
 		}
 
-		applicationContext.close();
+//		applicationContext.close();
 	}
 
 }
