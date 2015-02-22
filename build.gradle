@@ -6,6 +6,7 @@ buildscript {
         maven { url "http://repo.spring.io/libs-release" }
         mavenLocal()
     }
+
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.1.RELEASE")
 //        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.1.BUILD-SNAPSHOT")
@@ -47,9 +48,6 @@ dependencies {
 
     compile("org.apache.commons:commons-dbcp2")
     compile("mysql:mysql-connector-java")
-
-    compile("org.mybatis:mybatis-spring:1.2.2")
-    compile("org.mybatis:mybatis:3.2.8")
 
     compile("net.sf.ehcache:ehcache:2.9.0")
 
