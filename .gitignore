@@ -4,5 +4,3 @@ samples-spring-boot.iml
 gradlew.bat
 .idea
 gradle
-samples-spring-boot.out
-application.pid
